@@ -18,7 +18,7 @@
       app: targetAppId,
       id: targetRecordId,
     };
-    kintone.api(kintone.api.url('/k/v1/record', true), 'GET', body, function(resp) {
+    kintone.api(kintone.api.url('/k/v1/record.json', true), 'GET', body, function(resp) {
       event.record['Table'].value = resp.record['Table'].value;
 
       // サブテーブルを編集不可にする場合
